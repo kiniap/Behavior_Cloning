@@ -117,7 +117,7 @@ A combination of these was the key to  for the vehicle to able to drive autonomo
 
 - Input images: 160x320x3 (RGB image)
 
-** Prepocess the images **
+__Prepocess the images__
 - Cropping 2D Layer: Cropping 70 pixels from the top and 20 from the bottom, 0 from the left and right
 - Lambda layer: resize the image to 80x160
 - Lambda layer: to normalize the image, pixel = (pixel/255)-0.5
@@ -153,7 +153,7 @@ __Center image__
 
 ![](images/center_image_ccw_trk1.png)
 
-** Steering angle = -0.009433962 **
+__Steering angle = -0.009433962__
 
 To augment the data sat, I also used and left and right camera images
 
@@ -161,21 +161,21 @@ __Left camera image__
 
 ![alt text](images/left_image_ccw_trk1.png)
 
-** Left steering angle (0.25 correction):  0.240566038 **
+__Left steering angle (0.25 correction):  0.240566038__
 
 __right camera image__
 
 ![alt text](images/right_image_ccw_trk1.png)
 
-** Right steering angle (0.25 correction): -0.259433962 **
+__Right steering angle (0.25 correction): -0.259433962__
 
 I also used flipped images.
 
-** Example of a center flipped image: **
+__Example of a center flipped image__
 
 ![](images/center_image_flipped_ccw_trk1.png)
 
-** Steering angle = 0.009433962 **
+__ Flipped Steering angle = 0.009433962__
 
 After collection 2 runs of smooth CW driving behavior and 1 run of smooth CCW driving behavior, I had 33318 data points
 
@@ -183,7 +183,7 @@ I finally randomly shuffled the data set and put 20% of the data into a validati
 
 I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 3 as validation accuracy was not reducing after that and there was a risk of overfitting the training data.
 
-** Mean Squared Error loss for the Training and Validation data sets **
+__Mean Squared Error loss for the Training and Validation data sets__
 
 ![](images/TrainingAndValidationLoss.png)
 
