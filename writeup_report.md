@@ -122,7 +122,7 @@ __Prepocess the images__
 - Lambda layer: resize the image to 80x160
 - Lambda layer: to normalize the image, pixel = (pixel/255)-0.5
 
-** Nvidia architecture **
+__Nvidia architecture__
 - convolution2D layer with depth of 24, filter size 5x5, stride 2x2, 'VALID' padding
 - Relu Activation
 - convolution2D layer with depth of 36, filter size 5x5, stride 5x5, 'VALID' padding
@@ -163,7 +163,7 @@ __Left camera image__
 
 __Left steering angle (0.25 correction):  0.240566038__
 
-__right camera image__
+__Right camera image__
 
 ![alt text](images/right_image_ccw_trk1.png)
 
@@ -175,7 +175,7 @@ __Example of a center flipped image__
 
 ![](images/center_image_flipped_ccw_trk1.png)
 
-__ Flipped Steering angle = 0.009433962__
+__Flipped Steering angle = 0.009433962__
 
 After collection 2 runs of smooth CW driving behavior and 1 run of smooth CCW driving behavior, I had 33318 data points
 
